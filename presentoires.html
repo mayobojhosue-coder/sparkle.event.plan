@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Présentoires de mariage | Sparkle Event Planner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ===== BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #6b0f1a;
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+#navbar {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar a {
+    color: #f2c94c;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #f2c94c;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+#navbar a:hover {
+    background: #f2c94c;
+    color: #6b0f1a;
+}
+
+/* ===== TITRE ===== */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #f2c94c;
+    margin: 40px 0;
+}
+
+/* ===== GALERIE DEFILANTE ===== */
+.slider {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 40px 60px;
+    scroll-behavior: smooth;
+}
+
+.slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background: #f2c94c;
+    border-radius: 10px;
+}
+
+.slider img {
+    height: 320px;
+    margin-right: 25px;
+    border-radius: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="navbar">
+    <a href="index.html">⬅ Accueil</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- TITRE -->
+<h1>Présentoires de mariage</h1>
+
+<!-- GALERIE -->
+<div class="slider">
+    <img src="images/presentoire1.jpg" alt="Présentoire 1">
+    <img src="images/presentoire2.jpg" alt="Présentoire 2">
+    <img src="images/presentoire3.jpg" alt="Présentoire 3">
+    <img src="images/presentoire4.jpg" alt="Présentoire 4">
+    <img src="images/presentoire5.jpg" alt="Présentoire 5">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Tables décorées – Sparkle Event Planner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #6b0f1a;
+    color: white;
+}
+
+/* NAV */
+nav {
+    padding: 20px 30px;
+}
+
+nav a {
+    color: #f2c94c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+/* TITRE */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #f2c94c;
+    margin-top: 40px;
+}
+
+/* TEXTE INTRO */
+.intro-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto 50px;
+    opacity: 0.9;
+}
+
+/* GALERIE */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 0 50px 60px;
+}
+
+/* CARTE */
+.item {
+    background: white;
+    color: #333;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.item img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* TEXTE IMAGE */
+.caption {
+    padding: 18px;
+}
+
+.caption h3 {
+    font-family: 'Playfair Display', serif;
+    color: #6b0f1a;
+    margin-bottom: 8px;
+}
+
+.caption p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html">← Accueil</a>
+</nav>
+
+<h1>Tables décorées</h1>
+
+<div class="intro-text">
+    Des tables pensées comme de véritables œuvres décoratives,  
+    où chaque détail apporte élégance et harmonie à votre événement.
+</div>
+
+<div class="gallery">
+
+    <div class="item">
+        <img src="images/table1.jpg" onclick="openLightbox(this.src)">
+        <div class="caption">
+            <h3>Tables fleuries</h3>
+            <p>Des compositions florales délicates pour une ambiance fraîche et raffinée.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="images/table2.jpg" onclick="openLightbox(this.src)">
+        <div class="caption">
+            <h3>Tables à rubans</h3>
+            <p>Des jeux de textures et de couleurs pour une décoration élégante.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="images/table3.jpg" onclick="openLightbox(this.src)">
+        <div class="caption">
+            <h3>Tables traditionnelles</h3>
+            <p>Un hommage aux traditions avec une touche moderne et soignée.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="images/table4.jpg" onclick="openLightbox(this.src)">
+        <div class="caption">
+            <h3>Tables végétales</h3>
+            <p>Une décoration naturelle et apaisante inspirée de la nature.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg">
+</div>
+
+<script>
+function openLightbox(src) {
+    document.getElementById("lightboxImg").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

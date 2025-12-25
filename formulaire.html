@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Demande de devis – Sparkle Event Planner</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #6b0f1a;
+    color: white;
+}
+
+/* NAV */
+nav {
+    padding: 20px 30px;
+}
+
+nav a {
+    color: #f2c94c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: white;
+    color: #333;
+    padding: 40px;
+    border-radius: 16px;
+}
+
+/* TITRE */
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #6b0f1a;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* BOUTON */
+button {
+    padding: 14px;
+    background-color: #6b0f1a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">← Accueil</a>
+</nav>
+
+<div class="container">
+    <h1>Demande de devis</h1>
+
+    <form action="mailto:sparkleevent241@gmail.com" method="post" enctype="text/plain">
+        <label>Nom complet</label>
+        <input type="text" name="Nom" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" required>
+
+        <label>Type d’événement</label>
+        <select name="Événement">
+            <option>Mariage</option>
+            <option>Anniversaire</option>
+            <option>Événement à thème</option>
+            <option>Table décorée</option>
+            <option>Autre</option>
+        </select>
+
+        <label>Message</label>
+        <textarea name="Message" placeholder="Bonjour, j’aimerais organiser un événement..."></textarea>
+
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</div>
+
+</body>
+</html>
